@@ -1,0 +1,94 @@
+---
+title: "SEMANA_13_SISTEMATIZACIÓN"
+author: "WENDY SÁNCHEZ"
+format: html
+editor: visual
+---
+
+```{r}
+
+data<- read_csv("C:/Users/wendy/Downloads/s13_hemodialisis.csv")
+
+```
+
+You can add options to executable code like this
+
+```{r}
+#VER LAS 6 PRIMERAS FILAS DE LA DATA
+head(data)
+
+```
+
+```{r}
+#ESTRUCTURA DE LA DATA
+str(data)
+```
+
+```{r}
+#MEDIDAS DE TENDENCIA CENTRAL
+#MEDIA ARITMETICA
+mean(data$Edad)
+
+```
+
+```{r}
+
+#MEDIANA 
+median(data$Edad)
+```
+
+```{r}
+#MODA
+mode_Edad<-names(sort(table(data$Edad), decreasing = TRUE))
+```
+
+```{r}
+#TABLA DE FRECUENCIA
+table(data$Sexo)
+```
+
+```{r}
+#MEDIDAS DE DISPERSIÓN
+#VARIANZA
+var(data$Edad,na.rm = TRUE)
+```
+
+```{r}
+#DESVIACIÓN ESTANDAR
+sd(data$Edad,na.rm =TRUE)
+```
+
+```{r}
+#RANGO
+range(data$Edad,na.rm = TRUE)
+```
+
+```{r}
+#RANGO INTERCUARTILICO
+IQR(data$Edad,na.rm = TRUE)
+```
+
+```{r}
+#MEDIDAS DE POSICIÓN
+quantile(data$Edad,probs =c(0.25,0.50,0.75,0.90),na.rm = TRUE)
+summary(data$Edad)
+```
+
+```{r}
+#RESUME DE TODAS LAS VARIABLES
+summary(data)
+
+```
+
+```{r}
+#TABLA DE FRECUENCIA
+table(data$Sexo)
+prop.table(table(data$Edad))
+
+```
+
+```{r}
+#VISUALIZACIONES GRÁFICAS
+#HISTOGRAMA
+ggplot(data, aes(x= IMC ))+geom_histogram(bins = 30)+theme_minimal()
+```
