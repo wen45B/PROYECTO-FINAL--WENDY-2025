@@ -1,0 +1,23 @@
+---
+title: "TRABAJO SEMANA 02"
+format: html
+editor: visual
+---
+
+```{r}
+#01 Como primer paso nos dirigmos al repositorio la cual contiene los datos, scripts 
+```
+
+You can add options to executable code like this
+
+```{r}
+#02  Luego de entrar al repositorio nos dirigimos a la carpeta data y selecionamos : s02_indev_treat_artritis.csv.
+```
+
+The `echo: false` option dis
+
+```{r}
+#03 paso lo descargamos y no dirigimos al Rstudio para la creación del proyecto.
+```
+
+ables the printing of code (only output is displayed).
