@@ -1,0 +1,16 @@
+---
+title: "TRABAJO SEMANA 06"
+format: html
+editor: visual
+---
+
+```{r}
+#CARGAMOS DATA NUEVA
+Data <- read_csv("C:/Users/wendy/Downloads/s02_treat_artritis (1).csv")
+```
+
+```{r}
+#LIMPIAR FILA QUE CONTENGA DATA "na"
+data_limpia <- Data[!is.na(Data$CDAI), ]
+
+```
